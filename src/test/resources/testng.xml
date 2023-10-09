@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="TestPages Automation Suite">
+  <listeners>
+  	<listener class-name="com.testpages.qa.listeners.MyListeners" />
+  </listeners>
+  <test name="TestPages Tests">
+    <classes>
+      <class name="com.testpages.qa.testcases.FormTest"/>
+     
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
