@@ -30,9 +30,16 @@ public class FormTest extends Base {
 
     @Test(priority=1)
     public void verifyMandatoryFields() {
-      
-         formPage.MandatoryFields("John", "Password123", "This is a comment");
-        
-        
+        formPage.MandatoryFields(dataProp.getProperty("userNameText"), dataProp.getProperty("passwordFieldText"), dataProp.getProperty("commentsField"));
+        formPage.uploadFile(dataProp.getProperty("filePath"));
+        formPage.selectCheckbox();
+        formPage.selectRadioButton();
+        int index = Integer.parseInt(dataProp.getProperty("index"));
+        formPage.selectMultiSelectOption(index);
+        formPage.selectDropdownOptionByIndex(index);
+        formPage.submitForm();
     }
+
+    
+    
 }
